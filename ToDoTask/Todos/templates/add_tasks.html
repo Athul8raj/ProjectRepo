@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+<form method="post" action="{% url 'add' %}">
+    {% csrf_token %}
+    <label for="title">Title</label><br>
+    <input type="text" name="title" id="title" />
+    <br>
+    <label for="title">Desc</label><br>
+    <textarea rows="4" cols="50" name="desc" id="desc">
+    </textarea>
+    <br>
+    <br>
+    <div class="ui slider checkbox">
+        <input id="status" name="status" type="checkbox" />Completed
+    <br>
+    <br>
+    <input type="submit" value="Add" class= "btn btn-primary">
+</form>
+</div>
+
+
+</form>
+{% include 'includes/_footer.html' %}
+
+{% endblock %}

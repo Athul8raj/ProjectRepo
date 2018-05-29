@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+<h1>Register</h1>
+<form method ="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p><input type="submit" class= "btn btn-primary" value ="submit"></p>
+</form>
+</div>
+{% include 'includes/_footer.html' %}
+{% endblock %}

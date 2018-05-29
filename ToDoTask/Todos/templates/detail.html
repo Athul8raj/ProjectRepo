@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block body %}
+<a href="/todo">>>>Go Back</a>
+<div class="container">
+<h1>{{todo.title}}</h1>
+<h3>{{todo.desc}}</h3>
+
+
+Task was created on <strong>{{todo.created_at}}</strong>
+<br>
+
+This task is <strong>{{todo.status}}</strong>
+<br>
+<br>
+<a href="/edit/{{todo.created_by}}" class="btn btn-primary" role="button">Edit</a>
+<a href="/delete/{{todo.created_by}}" class="btn btn-danger" role="button">Delete</a>
+
+
+</div>
+{% include 'includes/_footer.html' %}
+{% endblock %}
