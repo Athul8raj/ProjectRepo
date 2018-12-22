@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div id="container">
+            <div class="title">
+                <h1>Memory Report</h1>
+            </div>
+            <div id="content">
+                The file consumed <strong>{{usage_before}}</strong>MB of Memory before!<br>
+                In our best opinion, the file consumes <strong>{{usage_mb}}</strong>MB of Memory now!<br>
+                There is {{percent_diff}}% decrease in memory usage now!<br>
+                
+                <a class="btn btn-primary" href={{url_for('upload_file')}} role="button"> << Back to Home </a>
+            </div>
+
+{% endblock %}

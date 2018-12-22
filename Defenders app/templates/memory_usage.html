@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div id="container">
+            <div class="title">
+                <h1>Memory Report and Analysis App</h1>
+                <br>
+                <h6> Select your file to upload</h6>
+        <form id="uploadbanner" enctype="multipart/form-data" method="post">
+           <label class="btn btn-default btn-file">
+           <input id="fileupload" name="file" type="file"/>
+           <label>
+           <input type="submit" value="Upload" id="submit"  class="btn btn-primary" />
+        </form>
+        </div>
+{% endblock %}
