@@ -37,7 +37,7 @@ def coefficient_of_determination(y_orig,y_line):
     return 1-(squared_error_regr/squared_error_mean)
 
 
-xs,ys = create_dataset(40,5,2,'pos')
+xs,ys = create_dataset(40,5,2,'neg')
 
 
 b,m = best_fit_slope_intercept(xs,ys)
